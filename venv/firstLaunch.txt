@@ -1,0 +1,114 @@
+---------------------------------------
+-----------VSCODE INITIATE-------------
+---------------------------------------
+
+# Navigate to your projects folder
+cd C:\Users\YourName\Documents\Projects
+
+# Create new project folder
+mkdir financial-risk-model
+cd financial-risk-model
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
+
+----------------------------------------
+-----------PIP INITIATE-----------------
+----------------------------------------
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Core ML packages
+pip install scikit-learn pandas numpy matplotlib seaborn
+
+# DVC and experiment tracking
+pip install dvc dvc-s3  # or dvc-gcs for Google Cloud
+
+# Jupyter for experiments
+pip install jupyter jupyterlab
+
+# Additional useful packages
+pip install plotly optuna category-encoders imbalanced-learn
+
+# Save requirements
+pip freeze > requirements.txt
+
+---------------------------------------------
+-------------GIT: GIT------------------------
+---------------------------------------------
+
+# Set your identity
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Check configuration
+git config --list
+
+---------------------------------------------
+-------------VSCODE: INITIATE GIT------------
+---------------------------------------------
+
+# In your project folder
+git init
+
+# Create .gitignore file
+echo "# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files (DVC will handle these)
+data/*.csv
+data/*.xlsx
+models/*.pkl
+
+# DVC
+.dvc/tmp
+.dvc/cache" > .gitignore
+
+---------------------------------------------
+-------------VSCODE: INITIATE GIT------------
+---------------------------------------------
+
+# Add remote origin (replace YOUR_USERNAME)
+git remote add origin https://github.com/YOUR_USERNAME/financial-risk-model.git
+
+# Create and commit initial files
+git add .
+git commit -m "Initial project setup"
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
